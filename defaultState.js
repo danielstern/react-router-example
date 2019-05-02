@@ -1,5 +1,5 @@
 export const defaultState = {
-    users:[{
+    authors:[{
         userId: "user-1",
         name:"Jon Snow",
         articles:["article-1","article-2"]
