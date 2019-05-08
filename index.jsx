@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Link, Redirect} from "react-router-dom";
 
-import { defaultState } from './defaultState';
+import { defaultState } from './config/defaultState';
 import { AuthorNameLink } from './components/common/AuthorNameLink';
 
 const Home = () => {
