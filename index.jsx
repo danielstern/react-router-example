@@ -40,16 +40,22 @@ const AuthorDetail = ({match}) => {
             <h3>Articles by {author.name}</h3>
             <ul>
                 { filteredArticles.map((article) => (
-                    <a href={`/article/${article.articleId}`}><li>{article.title}</li></a>
+                    <a key={article.articleId} href={`/article/${article.articleId}`}><li>{article.title}</li></a>
                 ))}
             </ul>
         </div>
     )
 };
 
+const handleArticleLike = (articleId)=>{
+    let article = defaultState.articles.find(article => article.articleId === articleId)
+    article.score += 1;
+    render();
+};
+
 const Article = ({match}) => {
     const { articleId } = match.params;
-    const { title, content, authorId } = defaultState.articles.find(article => article.articleId === articleId);
+    const { title, content, authorId, score } = defaultState.articles.find(article => article.articleId === articleId);
     const author = defaultState.authors.find(user => user.userId === authorId);
     return (
         <div>
@@ -62,6 +68,12 @@ const Article = ({match}) => {
             <p>
                 {content}
             </p>
+            <p>
+                Score: {score}
+            </p>
+            <button onClick={()=>handleArticleLike(articleId)}>
+                Like!
+            </button>
         </div>
     );
 };
@@ -79,4 +91,9 @@ const Main = () => (
     </BrowserRouter>
 );
 
-ReactDOM.render(<Main />, document.querySelector("#Container"));
+const render = ()=>{
+    ReactDOM.render(<Main />, document.querySelector("#Container"));
+};
+
+render();
+

@@ -16,21 +16,25 @@ export const defaultState = {
         articleId:"article-1",
         authorId:"user-1",
         title:"So your brother is king",
-        content:"No big deal! So what if your brother is the king of the realm?"
+        content:"No big deal! So what if your brother is the king of the realm?",
+        score:3
     },{
         articleId:"article-2",
         authorId:"user-1",
         title:"Looking great in black",
-        content:"One way to look your best that people often overlook is accessorising your cloak with raven's and crow's feathers..."
+        content:"One way to look your best that people often overlook is accessorising your cloak with raven's and crow's feathers...",
+        score:2
     },{
         articleId:"article-3",
         authorId:"user-2",
         title: "What to do when people underestimate you",
-        content: "As they say, good things come in small packages..."
+        content: "As they say, good things come in small packages...",
+        score:1
     },{
         articleId:"article-4",
         authorId:"user-3",
         title:"Governing the Realm 101",
-        content:"First, replace any experienced advisors with trusted, personal friends..."
+        content:"First, replace any experienced advisors with trusted, personal friends...",
+        score:4
     }]
 };
